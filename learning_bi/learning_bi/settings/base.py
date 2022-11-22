@@ -15,6 +15,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    #apps de terceros
+    'ckeditor',
+    'admin_interface',
+    'colorfield',
     # Local apps
     "applications.organizacion",
     "applications.usuario",

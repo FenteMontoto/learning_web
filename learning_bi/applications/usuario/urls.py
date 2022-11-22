@@ -20,5 +20,5 @@ from .import views
 
 
 urlpatterns = [
-    
+    path('listar_usuarios',views.Lista_Usuarios.as_view())
 ]

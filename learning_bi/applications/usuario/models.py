@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 
 
 
@@ -37,10 +37,10 @@ class Usuario(models.Model):
     # reduccion_jornada=models.CharField(max_length=2)
     # horas_jornada=models.IntegerField()
     # imagen=models.ImageField(upload_to="gestion_usuarios", null=True, blank=True)
-    
+    skill = models.ManyToManyField(Skill)
+    comentarios=RichTextField(default="")
     def __str__(self):
         return self.cod_gestor
-    skill = models.ManyToManyField(Skill)
     
     def __str__(self):
         return self.cod_gestor
