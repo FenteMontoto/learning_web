@@ -20,5 +20,7 @@ from .import views
 
 
 urlpatterns = [
-    path('listar_usuarios',views.Lista_Usuarios.as_view())
+    path('listar_usuarios/',views.Lista_Usuarios.as_view()),
+    path('lista_usuarios_delegacion/<delegacion>/',views.Lista_Usuarios_Delegacion.as_view()),
+    path('sucess/',views.UsuarioCreateView.as_view(), name='correcto'),
 ]

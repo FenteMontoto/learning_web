@@ -24,6 +24,8 @@ class Usuario_Admin(admin.ModelAdmin):
     )
     filter_horizontal=('skill',)
     
+   
+    
 class Logros_Admin(admin.ModelAdmin):
     list_display=(
         'skill',

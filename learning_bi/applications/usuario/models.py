@@ -22,6 +22,7 @@ class Usuario(models.Model):
     nombre = models.CharField("Nombre", max_length=20,default="")
     primer_ap = models.CharField("Primer apellido", max_length=20,default="")
     segundo_ap = models.CharField("Segundo apellido", max_length=20,default="")
+    # nombre_completo = models.CharField("Nombre Completo", max_length=40,blank=True)
     email=models.EmailField("Email",blank=True, null=True)
     extension=models.IntegerField(default=0)
     job=models.CharField("Función",max_length=30,blank=True, null=True)
@@ -38,9 +39,7 @@ class Usuario(models.Model):
     # horas_jornada=models.IntegerField()
     # imagen=models.ImageField(upload_to="gestion_usuarios", null=True, blank=True)
     skill = models.ManyToManyField(Skill)
-    comentarios=RichTextField(default="")
-    def __str__(self):
-        return self.cod_gestor
+    comentarios=RichTextField(blank=True, null=True,default="")
     
     def __str__(self):
         return self.cod_gestor
